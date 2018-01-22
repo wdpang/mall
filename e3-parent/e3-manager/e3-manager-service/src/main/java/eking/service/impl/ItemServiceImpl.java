@@ -7,7 +7,6 @@ import eking.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,6 +16,7 @@ import java.util.List;
 public class ItemServiceImpl implements ItemService{
     @Autowired
     private TbItemMapper tbItemMapper;
+
     @Override
     public TbItem getItemById(long itemId){
 //        TbItem tbItem=  tbItemMapper.selectByPrimaryKey(itemId);

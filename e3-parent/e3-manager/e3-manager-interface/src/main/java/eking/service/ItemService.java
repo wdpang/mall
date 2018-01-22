@@ -1,5 +1,6 @@
 package eking.service;
 
+import eking.common.pojo.EasyUIDataGridResult;
 import eking.pojo.TbItem;
 
 /**
@@ -7,4 +8,5 @@ import eking.pojo.TbItem;
  */
 public interface ItemService {
     TbItem getItemById(long itemId);
+    EasyUIDataGridResult getItemList(int page,int rows);
 }

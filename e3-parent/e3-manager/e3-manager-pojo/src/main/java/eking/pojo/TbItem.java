@@ -6,8 +6,6 @@ public class TbItem implements Serializable{
 
     private Long id;
 
-
-
     private String title;
 
     private String sellPoint;

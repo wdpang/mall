@@ -1,6 +1,7 @@
 package eking.controller;
 
 import eking.common.pojo.EasyUIDataGridResult;
+import eking.common.utils.E3Result;
 import eking.pojo.TbItem;
 import eking.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,12 @@ public class ItemController {
     @ResponseBody
     EasyUIDataGridResult getItemList(int page, int rows){
         EasyUIDataGridResult result = itemService.getItemList(page, rows);
+        return result;
+    }
+    @RequestMapping("/item/save")
+    @ResponseBody
+    public E3Result saveItem(TbItem item, String desc) {
+        E3Result result = itemService.addItem(item, desc);
         return result;
     }
 
